@@ -1,43 +1,40 @@
-import React from "react";
+import React from 'react'
 import { Link } from "react-router-dom";
-const Login = () => {
+
+import img from '../../image/gehuHome.jpg'
+import bannner from '../../image/banner.png'
+
+function Login() {
   return (
     <div
-      className="h-screen w-screen backdrop-blur-md flex  justify-center"
+      className="h-screen w-screen backdrop-blur-md absolute"
       style={{
-        backgroundImage: `url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")`,
+        backgroundImage: `url(${img})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}>
-      <div className="flex flex-col items-center mt-10 space-y-32">
-        <h1 className="text-3xl font-semibold bg-black text-white w-full text-center py-4 bg-opacity-75 rounded-2xl">
-          ABC Institute of Technology
-        </h1>
-        <div className="grid grid-cols-2 gap-28">
-          <div className="h-96 w-96 space-y-11 shadow-2xl flex flex-col justify-center items-center bg-transparent backdrop-blur-md bg-[#5a51d6] bg-opacity-60 rounded-xl">
-            <h1 className="text-4xl font-extrabold">Faculty</h1>
-
-            <Link
-              type="button"
-              to="/login/facultylogin"
-              className="flex items-center justify-center bg-blue-500 h-10 w-32 text-lg rounded-lg text-white hover:scale-110 transition-all duration-200">
-              Login
-            </Link>
-          </div>
-          <div className="h-96 w-96 space-y-11 shadow-2xl flex flex-col justify-center items-center bg-transparent backdrop-blur-md bg-[#d65158] bg-opacity-60 rounded-xl">
-            <h1 className="text-4xl font-extrabold">Student</h1>
-            <Link
-              type="button"
-              to="/login/studentlogin"
-              className="flex items-center justify-center bg-blue-500 h-10 w-32 text-lg rounded-lg text-white hover:scale-110 transition-all duration-200">
-              Login
-            </Link>
-          </div>
+        
+      <div className='w-1/5 h-1/2 bg-white opacity-95 relative left-3/4 top-40 flex items-center justify-between flex-col rounded-md'>
+        <img src={bannner} />
+        <div>
+          <span className=' font-semibold text-xl'>Login </span> <span className='text-gray-500'> as</span>
         </div>
+        <Link
+          type="button"
+          to="/login/facultylogin"
+          className="bg-blue-500 h-10 w-32 text-lg rounded-lg text-white FLEX">
+          Faculty 
+        </Link>
+        <Link
+          type="button"
+          to="/login/studentlogin"
+          className="bg-blue-500 h-10 w-32 text-lg rounded-lg text-white FLEX mb-4">
+          Student
+        </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login
