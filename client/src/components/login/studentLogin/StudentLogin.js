@@ -7,7 +7,6 @@ import Spinner from "../../../utils/Spinner";
 import { studentSignIn } from "../../../redux/actions/studentActions";
 
 const StudentLogin = () => {
-  const [translate, setTranslate] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -16,11 +15,6 @@ const StudentLogin = () => {
   const navigate = useNavigate();
   const store = useSelector((state) => state);
   const [error, setError] = useState({});
-  useEffect(() => {
-    setTimeout(() => {
-      setTranslate(true);
-    }, 1000);
-  }, []);
 
   useEffect(() => {
     if (store.errors) {
@@ -44,25 +38,10 @@ const StudentLogin = () => {
     }
   }, [store.errors]);
   return (
-    <div className="bg-[#d65158] h-screen w-screen flex items-center justify-center">
-      <div className="grid grid-cols-2">
-        <div
-          className={`h-96 w-96 bg-white flex items-center justify-center ${
-            translate ? "translate-x-[12rem]" : ""
-          }  duration-1000 transition-all rounded-3xl shadow-2xl`}>
-          <h1 className="text-[3rem]  font-bold text-center">
-            Student
-            <br />
-            Login
-          </h1>
-        </div>
+    <div className="bg-[#44be65] h-screen w-screen FLEX">
         <form
           onSubmit={login}
-          className={`${
-            loading ? "h-[27rem]" : "h-96"
-          } w-96 bg-[#2c2f35] flex flex-col items-center justify-center ${
-            translate ? "-translate-x-[12rem]" : ""
-          }  duration-1000 transition-all space-y-6 rounded-3xl shadow-2xl`}>
+          className="h-96 w-96 bg-[#2c2f35] FLEX flex-col space-y-6 rounded-3xl shadow-2xl">
           <h1 className="text-white text-3xl font-semibold">Student</h1>
           <div className="space-y-1">
             <p className="text-[#515966] font-bold text-sm">Username</p>
@@ -103,7 +82,7 @@ const StudentLogin = () => {
           </div>
           <button
             type="submit"
-            className="w-32 hover:scale-105 transition-all duration-150 rounded-lg flex items-center justify-center text-white text-base py-1 bg-[#04bd7d]">
+            className="w-32 rounded-lg FLEX text-white text-base py-1 bg-[#04bd7d]">
             Login
           </button>
           {loading && (
@@ -122,7 +101,6 @@ const StudentLogin = () => {
           )}
         </form>
       </div>
-    </div>
   );
 };
 
