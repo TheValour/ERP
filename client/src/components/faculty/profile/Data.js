@@ -1,12 +1,10 @@
 import React from "react";
-import * as classes from "../../../utils/styles";
+
 const Data = ({ label, value }) => {
   return (
-    <div className={classes.adminForm3}>
-      <h1 className={classes.adminLabel}>{label} :</h1>
-      <h2 className="font-normal text-lg bg-gray-100 shadow-xl px-2 py-1 rounded-lg">
-        {value}
-      </h2>
+    <div className="flex items-center justify-between bg-orange-100 rounded-md">
+      <span className="bg-gray-700 text-white mr-5 p-2">{label} :</span>
+      <span className="mr-5 p-2 rounded-xl">{value}</span>
     </div>
   );
 };
