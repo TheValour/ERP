@@ -8,9 +8,9 @@ export const adminDataHeading = "font-bold py-2 px-2";
 export const adminDataBodyFields = "py-2 px-2";
 
 export const adminFormSubmitButton =
-  "bg-red-500 w-24 h-8 rounded-md text-white hover:scale-105 hover:bg-red-700 transition-all duration-200 ";
+"bg-blue-500 text-white px-3 py-1 rounded-md";
 export const adminFormClearButton =
-  "bg-blue-500 w-24 h-8 rounded-md text-white hover:scale-105 hover:bg-blue-700 transition-all duration-200";
+"bg-red-500 text-white px-3 py-1 rounded-md"
 export const adminFormButton = "self-center space-x-6";
 
 export const adminForm0 = "flex flex-col mb-6";
@@ -20,7 +20,7 @@ export const adminForm2r = "flex flex-col space-y-10 pr-6";
 export const adminForm3 = "grid grid-cols-2  gap-10";
 
 export const adminLabel =
-  "font-bold text-lg bg-gray-700 shadow-xl text-white px-2 py-1 rounded-lg";
-export const adminInput = "border-2 px-2 py-1 text-sm";
+  "text-sm bg-gray-800 text-gray-200 px-2 py-1 rounded-md";
+export const adminInput = "border px-2 py-1 text-sm rounded-sm";
 
 export const loadingAndError = "flex justify-center mt-6";

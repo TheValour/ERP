@@ -5,6 +5,7 @@ import { addDepartment } from "../../../redux/actions/adminActions";
 import Spinner from "../../../utils/Spinner";
 import { ADD_DEPARTMENT, SET_ERRORS } from "../../../redux/actionTypes";
 import * as classes from "../../../utils/styles";
+
 const Body = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
@@ -45,7 +46,7 @@ const Body = () => {
   return (
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
-        <div className="flex text-gray-400 items-center space-x-2">
+        <div className="flex text-gray-400 items-center space-x-2 ml-5">
           <AddIcon />
           <h1>Add Subject</h1>
         </div>
@@ -68,12 +69,12 @@ const Body = () => {
               </div>
             </div>
             <div className={classes.adminFormButton}>
-              <button className={classes.adminFormSubmitButton} type="submit">
+              < button className="bg-blue-500 text-white px-3 py-1 rounded-md" type="submit">
                 Submit
               </button>
               <button
                 onClick={() => setDepartment("")}
-                className={classes.adminFormClearButton}
+                className="bg-red-500 text-white px-3 py-1 rounded-md"
                 type="button">
                 Clear
               </button>

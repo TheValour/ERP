@@ -7,6 +7,7 @@ import Spinner from "../../../utils/Spinner";
 import * as classes from "../../../utils/styles";
 import MenuItem from "@mui/material/MenuItem";
 import { SET_ERRORS } from "../../../redux/actionTypes";
+
 const Body = () => {
   const dispatch = useDispatch();
   const [department, setDepartment] = useState("");
@@ -45,7 +46,7 @@ const Body = () => {
   return (
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
-        <div className="flex text-gray-400 items-center space-x-2">
+        <div className="flex text-gray-400 items-center space-x-2 ml-5">
           <EngineeringIcon />
           <h1>All Faculty</h1>
         </div>

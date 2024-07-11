@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import EngineeringIcon from "@mui/icons-material/Engineering";
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteDepartment,
@@ -56,8 +56,8 @@ const Body = () => {
   return (
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
-        <div className="flex text-gray-400 items-center space-x-2">
-          <EngineeringIcon />
+        <div className="flex text-gray-400 items-center space-x-2 ml-5">
+          <DeleteForeverIcon />
           <h1>All Faculty</h1>
         </div>
         <div className=" mr-10 bg-white grid grid-cols-4 rounded-xl pt-6 pl-6 h-[29.5rem]">

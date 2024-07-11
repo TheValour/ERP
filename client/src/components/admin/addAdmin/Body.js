@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import EngineeringIcon from "@mui/icons-material/Engineering";
-import { useDispatch, useSelector } from "react-redux";
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';import { useDispatch, useSelector } from "react-redux";
 import FileBase from "react-file-base64";
 import { addAdmin } from "../../../redux/actions/adminActions";
 import Select from "@mui/material/Select";
@@ -68,8 +67,8 @@ const Body = () => {
   return (
     <div className="flex-[0.8] mt-3">
       <div className="space-y-5">
-        <div className="flex text-gray-400 items-center space-x-2">
-          <EngineeringIcon />
+        <div className="flex text-gray-500 items-center space-x-2 ml-6">
+          <PersonAddAltIcon />
           <h1>Add Admin</h1>
         </div>
         <div className=" mr-10 bg-white flex flex-col rounded-xl ">
@@ -168,7 +167,7 @@ const Body = () => {
               </div>
             </div>
             <div className={classes.adminFormButton}>
-              <button className={classes.adminFormSubmitButton} type="submit">
+              <button className="bg-green-500 text-white px-3 py-1 rounded-md" type="submit">
                 Submit
               </button>
               <button
@@ -186,7 +185,7 @@ const Body = () => {
                   });
                   setError({});
                 }}
-                className={classes.adminFormClearButton}
+                className="bg-red-400 text-white px-3 py-1 rounded-md"
                 type="button">
                 Clear
               </button>

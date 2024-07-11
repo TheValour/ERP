@@ -76,36 +76,48 @@ const Body = () => {
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
           <DeleteIcon />
-          <h1>All Students</h1>
+          <h1>Delete Admin</h1>
         </div>
-        <div className=" mr-10 bg-white grid grid-cols-4 rounded-xl pt-6 pl-6 h-[29.5rem]">
-          <form
-            className="flex flex-col space-y-2 col-span-1"
-            onSubmit={handleSubmit}>
-            <label htmlFor="department">Department</label>
-            <Select
-              required
-              displayEmpty
-              sx={{ height: 36, width: 224 }}
-              inputProps={{ "aria-label": "Without label" }}
-              value={value.department}
-              onChange={(e) =>
-                setValue({ ...value, department: e.target.value })
-              }>
-              <MenuItem value="">None</MenuItem>
-              {departments?.map((dp, idx) => (
-                <MenuItem key={idx} value={dp.department}>
-                  {dp.department}
-                </MenuItem>
-              ))}
-            </Select>
+        <div className="mr-10 bg-white grid grid-cols-4 rounded-xl pt-6 pl-6 h-[29.5rem]">
+          <div>
+            <form
+              className="flex flex-col space-y-2 col-span-1"
+              onSubmit={handleSubmit}>
+              <label htmlFor="department">Department</label>
+              <Select
+                required
+                displayEmpty
+                sx={{ height: 36, width: 224 }}
+                inputProps={{ "aria-label": "Without label" }}
+                value={value.department}
+                onChange={(e) =>
+                  setValue({ ...value, department: e.target.value })
+                }>
+                <MenuItem value="">None</MenuItem>
+                {departments?.map((dp, idx) => (
+                  <MenuItem key={idx} value={dp.department}>
+                    {dp.department}
+                  </MenuItem>
+                ))}
+              </Select>
 
-            <button
-              className={`${classes.adminFormSubmitButton} w-56`}
-              type="submit">
-              Search
-            </button>
-          </form>
+              <button
+                className={`${classes.adminFormSubmitButton} w-56`}
+                type="submit">
+                Search
+              </button>
+            </form>
+            {search && Object.keys(error).length === 0 && (
+              <div className="space-x-3 FLEX mt-5">
+                <button
+                  onClick={dltAdmin}
+                  className={`${classes.adminFormSubmitButton} bg-blue-500`}>
+                  Delete
+                </button>
+              </div>
+            )}
+          </div>
+
           <div className="col-span-3 mr-6">
             <div className={classes.loadingAndError}>
               {loading && (
@@ -177,15 +189,7 @@ const Body = () => {
                   ))}
                 </div>
               )}
-            {search && Object.keys(error).length === 0 && (
-              <div className="space-x-3 flex items-center justify-center mt-5">
-                <button
-                  onClick={dltAdmin}
-                  className={`${classes.adminFormSubmitButton} bg-blue-500`}>
-                  Delete
-                </button>
-              </div>
-            )}{" "}
+           
           </div>
         </div>
       </div>

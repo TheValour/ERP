@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import EngineeringIcon from "@mui/icons-material/Engineering";
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
 import { useDispatch, useSelector } from "react-redux";
 import { createNotice } from "../../../redux/actions/adminActions";
 import Select from "@mui/material/Select";
@@ -21,6 +21,7 @@ const Body = () => {
     content: "",
     from: "",
   });
+
   useEffect(() => {
     if (Object.keys(store.errors).length !== 0) {
       setError(store.errors);
@@ -59,14 +60,14 @@ const Body = () => {
   }, []);
 
   return (
-    <div className="flex-[0.8] mt-3">
-      <div className="space-y-5">
-        <div className="flex text-gray-400 items-center space-x-2">
-          <EngineeringIcon />
-          <h1>Create Notice</h1>
+    <div className="flex-[0.8]">
+      <div className="space-y-6 ml-6">
+        <div className="flex text-gray-500 items-center px-5">
+          <NoteAltIcon />
+          <h1 className="ml-2">Create Notice</h1>
         </div>
-        <div className=" mr-10 bg-white flex flex-col rounded-xl ">
-          <form className={classes.adminForm0} onSubmit={handleSubmit}>
+        <div className="mr-6 bg-white flex flex-col rounded-xl ">
+          <form className="FLEX flex-col" onSubmit={handleSubmit}>
             <div className={classes.adminForm1}>
               <div className={classes.adminForm2l}>
                 <div className={classes.adminForm3}>
@@ -85,11 +86,11 @@ const Body = () => {
                 </div>
 
                 <div className={classes.adminForm3}>
-                  <h1 className={classes.adminLabel}>Topic :</h1>
+                  <h1 className={classes.adminLabel}>Heading :</h1>
 
                   <input
                     required
-                    placeholder="Topic"
+                    placeholder="Heading"
                     className={classes.adminInput}
                     type="text"
                     value={value.topic}
@@ -133,15 +134,15 @@ const Body = () => {
               </div>
               <div className={classes.adminForm2r}>
                 <div className={classes.adminForm3}>
-                  <h1 className={`self-start  ${classes.adminLabel}`}>
-                    Content :
+                  <h1 className={`self-start  ${classes.adminLabel} w-40`}>
+                    Notice :
                   </h1>
 
                   <textarea
                     rows={10}
                     cols={40}
                     required
-                    placeholder="Content...."
+                    placeholder="Notice...."
                     className={classes.adminInput}
                     value={value.content}
                     onChange={(e) =>
@@ -153,7 +154,7 @@ const Body = () => {
               </div>
             </div>
             <div className={classes.adminFormButton}>
-              <button className={classes.adminFormSubmitButton} type="submit">
+              <button className="bg-blue-500 text-white px-3 py-1 rounded-md" type="submit">
                 Submit
               </button>
               <button
@@ -167,7 +168,7 @@ const Body = () => {
                   });
                   setError({});
                 }}
-                className={classes.adminFormClearButton}
+                className="bg-red-500 text-white px-3 py-1 rounded-md"
                 type="button">
                 Clear
               </button>
