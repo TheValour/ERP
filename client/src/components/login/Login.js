@@ -15,7 +15,7 @@ function Login() {
         backgroundSize: "cover",
       }}>
         
-      <div className='w-1/5 h-1/2 bg-gray-800 opacity-95 relative left-3/4 top-40 flex items-center justify-between flex-col rounded-md'>
+      <div className='w-1/5 h-3/5 bg-gray-800 opacity-95 relative left-3/4 top-40 flex items-center justify-between flex-col rounded-md'>
         <img src={bannner} />
         <div>
           <span className=' font-semibold text-gray-300 text-xl'>Login </span> <span className='text-gray-500'> as</span>
@@ -29,7 +29,7 @@ function Login() {
         <Link
           type="button"
           to="/login/studentlogin"
-          className="bg-blue-500 h-10 w-32 text-lg rounded-lg text-white FLEX mb-4">
+          className="bg-blue-500 h-10 w-32 text-lg rounded-lg text-white FLEX mb-8">
           Student
         </Link>
       </div>
