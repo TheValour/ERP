@@ -10,7 +10,7 @@ College ERP using MERN Stack
 5. Open another terminal in server folder and run "npm run start"
 6. Go to "localhost:3000/login/adminlogin"
 7. After successfully running the server, a dummy admin should be created.
-8. Dummy admin username = ADMDUMMY, password = 123
+8. Dummy admin username = ADMIN, password = 123
 
 # TechStack
 
@@ -36,28 +36,8 @@ College ERP using MERN Stack
 10. Student can Update profile details, password in profile section
 11. Student can check their attendance, marks and subject list
 12. Error display feature available with form validation
-14. Modern UI
 
-# Features to be added later in the future
+##
 
-1. Mobile Responsiveness
-2. Sections other than academics
-3. More freedom to admin while adding new students,admins,faculties or subjects
+> made by theValour
 
-# Preview
-
-Admin
-
-https://user-images.githubusercontent.com/90241373/156794210-af4db587-1aba-4289-9196-07f2e179d9bb.mp4
-
-<br>
-
-Faculty
-
-https://user-images.githubusercontent.com/90241373/156794428-1a73579c-8116-45dd-bee4-140f3b6de2c8.mp4
-
-<br>
-
-Student
-
-https://user-images.githubusercontent.com/90241373/156794474-1ba1d10e-30c8-4ce7-881b-520d7ab6aec6.mp4
