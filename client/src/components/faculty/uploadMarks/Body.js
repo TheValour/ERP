@@ -97,57 +97,68 @@ const Body = () => {
           <h1>All Students</h1>
         </div>
         <div className=" mr-10 bg-white grid grid-cols-4 rounded-xl pt-6 pl-6 h-[29.5rem]">
-          <form
-            className="flex flex-col space-y-2 col-span-1"
-            onSubmit={handleSubmit}>
-            <label htmlFor="year">Year</label>
-            <Select
-              required
-              displayEmpty
-              sx={{ height: 36, width: 224 }}
-              inputProps={{ "aria-label": "Without label" }}
-              value={value.year}
-              onChange={(e) => setValue({ ...value, year: e.target.value })}>
-              <MenuItem value="">None</MenuItem>
-              <MenuItem value="1">1</MenuItem>
-              <MenuItem value="2">2</MenuItem>
-              <MenuItem value="3">3</MenuItem>
-              <MenuItem value="4">4</MenuItem>
-            </Select>
-            <label htmlFor="section">Section</label>
-            <Select
-              required
-              displayEmpty
-              sx={{ height: 36, width: 224 }}
-              inputProps={{ "aria-label": "Without label" }}
-              value={value.section}
-              onChange={(e) => setValue({ ...value, section: e.target.value })}>
-              <MenuItem value="">None</MenuItem>
-              <MenuItem value="1">1</MenuItem>
-              <MenuItem value="2">2</MenuItem>
-              <MenuItem value="3">3</MenuItem>
-            </Select>
-            <label htmlFor="year">Test</label>
-            <Select
-              required
-              displayEmpty
-              sx={{ height: 36, width: 224 }}
-              inputProps={{ "aria-label": "Without label" }}
-              value={value.test}
-              onChange={(e) => setValue({ ...value, test: e.target.value })}>
-              <MenuItem value="">None</MenuItem>
-              {tests?.map((test, idx) => (
-                <MenuItem value={test.test} key={idx}>
-                  {test.test}
-                </MenuItem>
-              ))}
-            </Select>
-            <button
-              className={`${classes.adminFormSubmitButton} w-56`}
-              type="submit">
-              Search
-            </button>
-          </form>
+          <div>
+            <form
+              className="flex flex-col space-y-2 col-span-1"
+              onSubmit={handleSubmit}>
+              <label htmlFor="year">Year</label>
+              <Select
+                required
+                displayEmpty
+                sx={{ height: 36, width: 224 }}
+                inputProps={{ "aria-label": "Without label" }}
+                value={value.year}
+                onChange={(e) => setValue({ ...value, year: e.target.value })}>
+                <MenuItem value="">None</MenuItem>
+                <MenuItem value="1">1</MenuItem>
+                <MenuItem value="2">2</MenuItem>
+                <MenuItem value="3">3</MenuItem>
+                <MenuItem value="4">4</MenuItem>
+              </Select>
+              <label htmlFor="section">Section</label>
+              <Select
+                required
+                displayEmpty
+                sx={{ height: 36, width: 224 }}
+                inputProps={{ "aria-label": "Without label" }}
+                value={value.section}
+                onChange={(e) => setValue({ ...value, section: e.target.value })}>
+                <MenuItem value="">None</MenuItem>
+                <MenuItem value="1">1</MenuItem>
+                <MenuItem value="2">2</MenuItem>
+                <MenuItem value="3">3</MenuItem>
+              </Select>
+              <label htmlFor="year">Test</label>
+              <Select
+                required
+                displayEmpty
+                sx={{ height: 36, width: 224 }}
+                inputProps={{ "aria-label": "Without label" }}
+                value={value.test}
+                onChange={(e) => setValue({ ...value, test: e.target.value })}>
+                <MenuItem value="">None</MenuItem>
+                {tests?.map((test, idx) => (
+                  <MenuItem value={test.test} key={idx}>
+                    {test.test}
+                  </MenuItem>
+                ))}
+              </Select>
+              <button
+                className={`${classes.adminFormSubmitButton} w-56`}
+                type="submit">
+                Search
+              </button>
+            </form>
+            {search && Object.keys(error).length === 0 && (
+                <div className="">
+                  <button
+                    onClick={uploadMarks}
+                    className={`${classes.adminFormSubmitButton} bg-blue-500 mt-5 ml-[22rem]`}>
+                    Upload
+                  </button>
+                </div>
+              )}
+          </div>
           <div className="col-span-3 mr-6">
             <div className={classes.loadingAndError}>
               {loading && (
@@ -221,15 +232,6 @@ const Body = () => {
                   ))}
                 </div>
               )}
-            {search && Object.keys(error).length === 0 && (
-              <div className="">
-                <button
-                  onClick={uploadMarks}
-                  className={`${classes.adminFormSubmitButton} bg-blue-500 mt-5 ml-[22rem]`}>
-                  Upload
-                </button>
-              </div>
-            )}
             {(error.examError || error.backendError) && (
               <p className="text-red-500 text-2xl font-bold ml-32">
                 {error.examError || error.backendError}

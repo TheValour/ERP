@@ -9,8 +9,8 @@ import { MenuItem, Select } from "@mui/material";
 import Spinner from "../../../utils/Spinner";
 import * as classes from "../../../utils/styles";
 import { ATTENDANCE_MARKED, SET_ERRORS } from "../../../redux/actionTypes";
-import { getTest } from "../../../redux/actions/facultyActions";
 import { getSubject } from "../../../redux/actions/adminActions";
+
 const Body = () => {
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("user"));
@@ -110,6 +110,8 @@ const Body = () => {
           <h1>All Students</h1>
         </div>
         <div className=" mr-10 bg-white grid grid-cols-4 rounded-xl pt-6 pl-6 h-[29.5rem]">
+          <div>
+
           <form
             className="flex flex-col space-y-2 col-span-1"
             onSubmit={handleSubmit}>
@@ -164,6 +166,31 @@ const Body = () => {
               Search
             </button>
           </form>
+          {search && Object.keys(error).length === 0 && (
+              <div className="space-x-3 flex items-center justify-center mt-5">
+                <label className="font-bold text-lg">Subject</label>
+                <Select
+                  required
+                  displayEmpty
+                  sx={{ height: 36, width: 224 }}
+                  inputProps={{ "aria-label": "Without label" }}
+                  value={subjectName}
+                  onChange={(e) => setSubjectName(e.target.value)}>
+                  <MenuItem value="">None</MenuItem>
+                  {subjects?.map((dp, idx) => (
+                    <MenuItem key={idx} value={dp.subjectName}>
+                      {dp.subjectName}
+                    </MenuItem>
+                  ))}
+                </Select>
+                <button
+                  onClick={uploadAttendance}
+                  className={`${classes.adminFormSubmitButton} bg-blue-500`}>
+                  Mark
+                </button>
+              </div>
+            )}
+          </div>
           <div className="col-span-3 mr-6">
             <div className={classes.loadingAndError}>
               {loading && (
@@ -235,30 +262,6 @@ const Body = () => {
                   ))}
                 </div>
               )}
-            {search && Object.keys(error).length === 0 && (
-              <div className="space-x-3 flex items-center justify-center mt-5">
-                <label className="font-bold text-lg">Subject</label>
-                <Select
-                  required
-                  displayEmpty
-                  sx={{ height: 36, width: 224 }}
-                  inputProps={{ "aria-label": "Without label" }}
-                  value={subjectName}
-                  onChange={(e) => setSubjectName(e.target.value)}>
-                  <MenuItem value="">None</MenuItem>
-                  {subjects?.map((dp, idx) => (
-                    <MenuItem key={idx} value={dp.subjectName}>
-                      {dp.subjectName}
-                    </MenuItem>
-                  ))}
-                </Select>
-                <button
-                  onClick={uploadAttendance}
-                  className={`${classes.adminFormSubmitButton} bg-blue-500`}>
-                  Mark
-                </button>
-              </div>
-            )}
           </div>
         </div>
       </div>

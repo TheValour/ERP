@@ -35,8 +35,8 @@ const StudentHome = () => {
   }, [dispatch]);
 
   return (
-    <div className="bg-gray-300 h-screen w-screen FLEX">
-      <div className="flex flex-col  bg-[#f4f6fa] h-[90%] w-[95%] rounded-2xl shadow-2xl space-y-6 overflow-y-hidden">
+    <div className="STUDENTPAGE">
+      <div className="STUINNER">
         <Header />
         <div className="flex flex-[0.95]">
           <Sidebar />

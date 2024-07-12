@@ -5,8 +5,8 @@ import Sidebar from "../Sidebar";
 
 const Profile = () => {
   return (
-    <div className="bg-[#d6d9e0] h-screen FLEX">
-      <div className="flex flex-col  bg-[#f4f6fa] h-[95%] w-[95%] rounded-2xl shadow-2xl space-y-6 ">
+    <div className="STUDENTPAGE">
+      <div className="STUINNER">
         <Header />
         <div className="flex flex-[0.95] overflow-y-scroll">
           <Sidebar />

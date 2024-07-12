@@ -10,7 +10,7 @@ const Body = () => {
   const navigate = useNavigate();
   return (
     <div className="flex-[0.8] mt-3">
-      <div className="space-y-5">
+      <div className="space-y-5 ml-5">
         <div className="flex  items-center justify-between mr-8">
           <div className="flex space-x-2 text-gray-500">
             <AssignmentIndIcon />

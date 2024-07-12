@@ -526,6 +526,7 @@ export const addStudent = async (req, res) => {
       motherContactNumber,
       year,
     } = req.body;
+    
     const errors = { emailError: String };
     const existingStudent = await Student.findOne({ email });
     if (existingStudent) {
