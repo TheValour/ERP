@@ -287,9 +287,8 @@ export const addFaculty = async (req, res) => {
 
     var username = components.join("");
     let hashedPassword;
-    const newDob = dob.split("-").reverse().join("-");
 
-    hashedPassword = await bcrypt.hash(newDob, 10);
+    hashedPassword = await bcrypt.hash("123", 10);
     var passwordUpdated = false;
 
     const newFaculty = await new Faculty({
@@ -552,7 +551,7 @@ export const addStudent = async (req, res) => {
     let hashedPassword;
     const newDob = dob.split("-").reverse().join("-");
 
-    hashedPassword = await bcrypt.hash(newDob, 10);
+    hashedPassword = await bcrypt.hash("123", 10);
     var passwordUpdated = false;
 
     const newStudent = await new Student({

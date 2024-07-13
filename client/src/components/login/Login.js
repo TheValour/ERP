@@ -16,7 +16,7 @@ function Login() {
       }}>
         
       <div className='w-1/5 h-3/5 bg-gray-800 opacity-95 relative left-3/4 top-40 flex items-center justify-between flex-col rounded-md'>
-        <img src={bannner} />
+        <img src={bannner} alt='img'/>
         <div>
           <span className=' font-semibold text-gray-300 text-xl'>Login </span> <span className='text-gray-500'> as</span>
         </div>

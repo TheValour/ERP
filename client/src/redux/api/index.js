@@ -12,8 +12,7 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-// Admin
-console.log("He")
+// Admin---------------------------------------------------------------------------
 export const adminSignIn = (formData) => API.post("/api/admin/login", formData);
 
 export const adminUpdatePassword = (updatedPassword) =>
@@ -67,7 +66,8 @@ export const getStudent = (student) =>
   API.post("/api/admin/getstudent", student);
 export const getNotice = (notice) => API.post("/api/admin/getnotice", notice);
 
-// Faculty
+
+// Faculty----------------------------------------------------------------------
 
 export const facultySignIn = (formData) =>
   API.post("/api/faculty/login", formData);
@@ -86,7 +86,8 @@ export const uploadMarks = (data) => API.post("/api/faculty/uploadmarks", data);
 export const markAttendance = (data) =>
   API.post("/api/faculty/markattendance", data);
 
-// Student
+
+// Student ---------------------------------------------------------------------
 
 export const studentSignIn = (formData) =>
   API.post("/api/student/login", formData);

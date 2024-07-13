@@ -27,7 +27,7 @@ const AdminLogin = () => {
     setLoading(true);
     setTimeout(() => {
       dispatch(adminSignIn({ username: username, password: password }, navigate));
-    }, 3000);
+    }, 2000);
   };
 
   useEffect(() => {
@@ -37,9 +37,9 @@ const AdminLogin = () => {
       setPassword("");
     }
   }, [store.errors]);
+
   return (
     <div className="bg-red-400 h-screen w-screen flex items-center justify-center">
-      
       <form
         onSubmit={login}
         className="h-96 w-96 bg-[#2c2f35] FLEX flex-col space-y-6 rounded-3xl shadow-2xl">
