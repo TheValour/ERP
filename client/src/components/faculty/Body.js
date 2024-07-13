@@ -24,8 +24,8 @@ const Body = () => {
               sx={{ fontSize: 40 }}
             />
             <div className="flex flex-col">
-              <h1>Class</h1>
-              <h2 className="text-2xl font-bold">12</h2>
+              <h1>Class Coordinator</h1>
+              <h2 className="text-2xl font-bold">CSE</h2>
             </div>
           </div>
           <div className="flex items-center space-x-4 border-r-2">
@@ -35,7 +35,7 @@ const Body = () => {
             />
             <div className="flex flex-col">
               <h1>Student</h1>
-              <h2 className="text-2xl font-bold">10</h2>
+              <h2 className="text-2xl font-bold">44</h2>
             </div>
           </div>
           <div className="flex items-center space-x-4 border-r-2">

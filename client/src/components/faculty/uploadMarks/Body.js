@@ -149,15 +149,6 @@ const Body = () => {
                 Search
               </button>
             </form>
-            {search && Object.keys(error).length === 0 && (
-                <div className="">
-                  <button
-                    onClick={uploadMarks}
-                    className={`${classes.adminFormSubmitButton} bg-blue-500 mt-5 ml-[22rem]`}>
-                    Upload
-                  </button>
-                </div>
-              )}
           </div>
           <div className="col-span-3 mr-6">
             <div className={classes.loadingAndError}>
@@ -230,6 +221,15 @@ const Body = () => {
                       />
                     </div>
                   ))}
+                </div>
+              )}
+              {search && Object.keys(error).length === 0 && (
+                <div className="">
+                  <button
+                    onClick={uploadMarks}
+                    className={`${classes.adminFormSubmitButton} bg-blue-500 mt-5 ml-[22rem]`}>
+                    Upload
+                  </button>
                 </div>
               )}
             {(error.examError || error.backendError) && (

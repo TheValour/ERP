@@ -21,7 +21,7 @@ const Body = () => {
     <div className="flex-[0.8] mt-3 space-y-5">
       <div className="flex flex-col mr-5 space-y-4 overflow-y-hidden">
         <div className="bg-white h-[8rem] rounded-xl shadow-lg grid grid-cols-4 justify-between px-8 items-center space-x-4">
-          <div className="flex items-center space-x-4 border-r-2">
+          <div className="flex items-center space-x-4 border-r-4 bg-gray-200 p-2 border-gray-300 rounded-lg">
             <LibraryBooksIcon
               className="rounded-full py-2 bg-orange-300"
               sx={{ fontSize: 40 }}
@@ -31,7 +31,7 @@ const Body = () => {
               <h2 className="text-2xl font-bold">{faculties?.length}</h2>
             </div>
           </div>
-          <div className="flex items-center space-x-4 border-r-2">
+          <div className="flex items-center space-x-4 border-r-4 bg-gray-200 p-2 border-gray-300 rounded-lg">
             <BoyIcon
               className="rounded-full py-2 bg-orange-300"
               sx={{ fontSize: 40 }}
@@ -41,7 +41,7 @@ const Body = () => {
               <h2 className="text-2xl font-bold">{students?.length}</h2>
             </div>
           </div>
-          <div className="flex items-center space-x-4 border-r-2">
+          <div className="flex items-center space-x-4 border-r-4 bg-gray-200 p-2 border-gray-300 rounded-lg">
             <AdminPanelSettingsIcon
               className="rounded-full py-2 bg-orange-300"
               sx={{ fontSize: 40 }}
@@ -51,7 +51,7 @@ const Body = () => {
               <h2 className="text-2xl font-bold">{admins?.length}</h2>
             </div>
           </div>
-          <div className="flex items-center space-x-4 ">
+          <div className="flex items-center space-x-4 border-r-4 bg-gray-200 p-2 border-gray-300 rounded-lg">
             <MenuBookIcon
               className="rounded-full py-2 bg-orange-300"
               sx={{ fontSize: 40 }}
@@ -62,6 +62,8 @@ const Body = () => {
             </div>
           </div>
         </div>
+        
+        
         <div className="bg-white h-[17rem] w-full rounded-xl shadow-lg flex flex-col  pt-3">
           <div className="flex px-3">
             {open && (

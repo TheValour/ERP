@@ -13,7 +13,7 @@ import Sidebar from "./Sidebar";
 
 const StudentHome = () => {
   const user = JSON.parse(localStorage.getItem("user"));
-
+  console.log(user)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getSubject(user.result.department, user.result.year));
@@ -21,14 +21,13 @@ const StudentHome = () => {
       getTestResult(
         user.result.department,
         user.result.year,
-        user.result.section
+        user.result.section,
+        user.result.username
       )
     );
     dispatch(
       getAttendance(
-        user.result.department,
-        user.result.year,
-        user.result.section
+        user.result.username
       )
     );
     dispatch(getNotice());

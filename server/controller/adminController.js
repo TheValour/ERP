@@ -164,7 +164,7 @@ export const addDummyAdmin = async () => {
   const email = "dummy@gmail.com";
   const password = "123";
   const name = "dummy";
-  const username = "ADMDUMMY";
+  const username = "ADMIN";
   let hashedPassword;
   hashedPassword = await bcrypt.hash(password, 10);
   var passwordUpdated = true;
@@ -179,9 +179,9 @@ export const addDummyAdmin = async () => {
       username,
       passwordUpdated,
     });
-    console.log("Dummy user added.");
+    console.log("Test user added.");
   } else {
-    console.log("Dummy user already exists.");
+    console.log("TEST user already exists.");
   }
 };
 

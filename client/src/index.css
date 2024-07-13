@@ -9,7 +9,7 @@
 }
 
 .STUDENTPAGE {
-    @apply bg-sky-400 h-screen w-screen flex items-center justify-center;
+    @apply bg-gray-800 h-screen w-screen flex items-center justify-center;
 }
 .STUINNER{
     @apply flex flex-col  bg-[#f4f6fa] h-[95%] w-[95%] rounded-2xl shadow-2xl space-y-6 overflow-y-scroll
