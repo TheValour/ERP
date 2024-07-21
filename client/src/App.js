@@ -1,47 +1,48 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+
+import Login from "./components/login/Login";
+
+import AdminLogin from "./components/login/adminLogin/AdminLogin";
+import AdminUpdate from "./components/admin/profile/update/Update";
+import AdminHome from "./components/admin/AdminHome";
+import AdminPassword from "./components/admin/profile/update/password/Password";
+import AdminFirstTimePassword from "./components/admin/profile/update/firstTimePassword/FirstTimePassword";
+import AdminProfile from "./components/admin/profile/Profile";
 import AddAdmin from "./components/admin/addAdmin/AddAdmin";
-import AddDepartment from "./components/admin/addDepartment/AddDepartment";
 import AddFaculty from "./components/admin/addFaculty/AddFaculty";
 import AddStudent from "./components/admin/addStudent/AddStudent";
+import AddDepartment from "./components/admin/addDepartment/AddDepartment";
 import AddSubject from "./components/admin/addSubject/AddSubject";
-import AdminHome from "./components/admin/AdminHome";
-
 import GetFaculty from "./components/admin/getFaculty/GetFaculty";
 import GetStudent from "./components/admin/getStudent/GetStudent";
 import GetSubject from "./components/admin/getSubject/GetSubject";
-import AdminProfile from "./components/admin/profile/Profile";
-import AdminFirstTimePassword from "./components/admin/profile/update/firstTimePassword/FirstTimePassword";
-import AdminPassword from "./components/admin/profile/update/password/Password";
-
-import AdminUpdate from "./components/admin/profile/update/Update";
-import CreateTest from "./components/faculty/createTest/CreateTest";
-import FacultyHome from "./components/faculty/FacultyHome";
-import MarkAttendance from "./components/faculty/markAttendance/MarkAttendance";
-import FacultyProfile from "./components/faculty/profile/Profile";
-import FacultyFirstTimePassword from "./components/faculty/profile/update/firstTimePassword/FirstTimePassword";
-import FacultyPassword from "./components/faculty/profile/update/password/Password";
-import FacultyUpdate from "./components/faculty/profile/update/Update";
-import UploadMarks from "./components/faculty/uploadMarks/UploadMarks";
-import AdminLogin from "./components/login/adminLogin/AdminLogin";
-import FacultyLogin from "./components/login/facultyLogin/FacultyLogin";
-import Login from "./components/login/Login";
-
-import StudentLogin from "./components/login/studentLogin/StudentLogin";
-import StudentFirstTimePassword from "./components/student/profile/update/firstTimePassword/FirstTimePassword";
-import StudentHome from "./components/student/StudentHome";
-import StudentProfile from "./components/student/profile/Profile";
-import StudentUpdate from "./components/student/profile/update/Update";
-import StudentPassword from "./components/student/profile/update/password/Password";
-import SubjectList from "./components/student/subjectList/SubjectList";
-import TestResult from "./components/student/testResult/TestResult";
-import Attendance from "./components/student/attendance/Attendance";
 import DeleteAdmin from "./components/admin/deleteAdmin/DeleteAdmin";
 import DeleteDepartment from "./components/admin/deleteDepartment/DeleteDepartment";
 import DeleteFaculty from "./components/admin/deleteFaculty/DeleteFaculty";
 import DeleteStudent from "./components/admin/deleteStudent/DeleteStudent";
 import DeleteSubject from "./components/admin/deleteSubject/DeleteSubject";
 import CreateNotice from "./components/admin/createNotice/CreateNotice";
+
+import FacultyLogin from "./components/login/facultyLogin/FacultyLogin";
+import FacultyHome from "./components/faculty/FacultyHome";
+import FacultyProfile from "./components/faculty/profile/Profile";
+import FacultyFirstTimePassword from "./components/faculty/profile/update/firstTimePassword/FirstTimePassword";
+import FacultyUpdate from "./components/faculty/profile/update/Update";
+import CreateTest from "./components/faculty/createTest/CreateTest";
+import MarkAttendance from "./components/faculty/markAttendance/MarkAttendance";
+import FacultyPassword from "./components/faculty/profile/update/password/Password";
+import UploadMarks from "./components/faculty/uploadMarks/UploadMarks";
+
+import StudentLogin from "./components/login/studentLogin/StudentLogin";
+import StudentHome from "./components/student/StudentHome";
+import StudentProfile from "./components/student/profile/Profile";
+import StudentFirstTimePassword from "./components/student/profile/update/firstTimePassword/FirstTimePassword";
+import StudentPassword from "./components/student/profile/update/password/Password";
+import StudentUpdate from "./components/student/profile/update/Update";
+import SubjectList from "./components/student/subjectList/SubjectList";
+import TestResult from "./components/student/testResult/TestResult";
+import Attendance from "./components/student/attendance/Attendance";
 
 const App = () => {
   return (
